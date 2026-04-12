@@ -4,4 +4,4 @@ SVG library
 
 users could add SVG files into this repo, via PR.
 
-<a>gallery</a>
+<a href="https://github.com/dujanhung/sicalyme-svg-lib/blob/main/gallery.md">gallery</a>
