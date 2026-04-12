@@ -2,6 +2,8 @@
 SVG library
 </h2>
 
+users could add SVG files into this repo, via PR.
+
 <table><tr><td>
 <h2>
 🔔 top one today
