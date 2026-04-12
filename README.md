@@ -10,7 +10,7 @@ leaderboard
 
 <table><tr><td>
 <h2>
-pause
+<code>pause.svg</code>
 </h2>
 <table><tr><td>
 <img src="https://github.com/dujanhung/sicalyme-svg-lib/blob/main/icon/pause.svg">
