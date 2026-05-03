@@ -1,19 +1,31 @@
 name: validate SVG
 on:
  workflow_dispatch:
+ pull_request:
+  paths:
+   - "**.svg"
+env:
+ FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+ SVG_SCHEMA: https://
+ SVG_TARGET: *.svg
 jobs:
  validate:
   runs-on: ubuntu-latest
   steps:
    - name: checkout repo
      uses: actions/checkout@v5
-   - name: setup Python
-     uses: actions/setup-python@v6
+   - name: 
+     uses: actions/checkout@v5
      with:
-      python-version: '3.14'
+      repository: dujanhung/svg-schema-validator
+      path: svg-schema-validator
    - name: install XML lint
      run: pip install lxml
    - name: install CSS utility
      run: pip install cssutils
+   - name: setup Python
+     uses: actions/setup-python@v6
+     with:
+      python-version: '3.14'
    - name: validate
-     run: python scripts/validate_svg.py
+     run: python svg-schema-validator/script.py $SVG_SCHEMA $SVG_TARGET
