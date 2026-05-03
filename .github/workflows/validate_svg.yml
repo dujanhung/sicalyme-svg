@@ -28,4 +28,4 @@ jobs:
       python-version: '3.14'
    - name: validate
      run: |
-      find . -type f -name "*.svg" -exec python svg-schema-validator/script.py {} \;
+      find . -type f -name "*.svg" -exec python svg-schema-validator/script.py $SVG_SCHEMA {} \;
