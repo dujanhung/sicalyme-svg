@@ -1,0 +1,19 @@
+name: validate SVG
+on:
+ workflow_dispatch
+jobs:
+ validate:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout repo
+     uses: actions/checkout@v5
+   - name: setup Python
+     uses: actions/setup-python@v6
+     with:
+      python-version: '3.14'
+   - name: install XML lint
+     run: pip install lxml
+   - name: install CSS utility
+     run: pip install cssutils
+   - name: validate
+     run: python scripts/validate_svg.py
