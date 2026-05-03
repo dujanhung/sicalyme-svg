@@ -6,7 +6,7 @@ on:
    - "**.svg"
 env:
  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
- SVG_SCHEMA: https://
+ SVG_SCHEMA: https://www.w3.org/TR/SVG11/
  SVG_TARGET: *.svg
 jobs:
  validate:
