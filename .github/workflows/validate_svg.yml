@@ -7,7 +7,6 @@ on:
 env:
  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
  SVG_SCHEMA: https://www.w3.org/TR/SVG11/
- SVG_TARGET: *.svg
 jobs:
  validate:
   runs-on: ubuntu-latest
@@ -28,4 +27,5 @@ jobs:
      with:
       python-version: '3.14'
    - name: validate
-     run: python svg-schema-validator/script.py $SVG_SCHEMA $SVG_TARGET
+     run: |
+      find . -type f -name "*.svg" -exec python svg-schema-validator/script.py {} \;
