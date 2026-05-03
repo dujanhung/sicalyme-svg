@@ -1,6 +1,6 @@
 name: validate SVG
 on:
- workflow_dispatch
+ workflow_dispatch:
 jobs:
  validate:
   runs-on: ubuntu-latest
