@@ -14,7 +14,7 @@ jobs:
   steps:
    - name: checkout repo
      uses: actions/checkout@v5
-   - name: 
+   - name: checkout svg-schema-validator repo
      uses: actions/checkout@v5
      with:
       repository: dujanhung/svg-schema-validator
