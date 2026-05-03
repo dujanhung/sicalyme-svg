@@ -18,14 +18,14 @@ jobs:
      with:
       repository: dujanhung/svg-schema-validator
       path: svg-schema-validator
-   - name: install XML lint
-     run: pip install lxml
-   - name: install CSS utility
-     run: pip install cssutils
    - name: setup Python
      uses: actions/setup-python@v6
      with:
       python-version: '3.14'
+   - name: install XML lint
+     run: pip install lxml
+   - name: install CSS utility
+     run: pip install cssutils
    - name: validate
      run: |
       find . -type f -name "*.svg" -exec python svg-schema-validator/script.py $SVG_SCHEMA {} \;
