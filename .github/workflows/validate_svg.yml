@@ -26,9 +26,9 @@ jobs:
      run: pip install lxml
    - name: install CSS utility
      run: pip install cssutils
-   - name: install XSD
+   - name: install XSD file
      run: |
       curl -L $LINK_XSD -o svg11.xsd
    - name: validate
      run: |
-      find . -type f -name "*.svg" -exec python svg-schema-validator/script.py $SVG_SCHEMA {} \;
+      find . -type f -name "*.svg" -exec python svg-schema-validator/script.py svg11.xsd {} \;
