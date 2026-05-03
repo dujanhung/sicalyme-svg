@@ -6,7 +6,7 @@ on:
    - "**.svg"
 env:
  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
- SVG_SCHEMA: https://www.w3.org/TR/SVG11/
+ LINK_XSD: https://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20110816.xsd
 jobs:
  validate:
   runs-on: ubuntu-latest
@@ -26,6 +26,9 @@ jobs:
      run: pip install lxml
    - name: install CSS utility
      run: pip install cssutils
+   - name: install XSD
+     run: |
+      curl -L $LINK_XSD -o svg11.xsd
    - name: validate
      run: |
       find . -type f -name "*.svg" -exec python svg-schema-validator/script.py $SVG_SCHEMA {} \;
