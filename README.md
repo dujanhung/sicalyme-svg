@@ -2,7 +2,7 @@
 SVG library
 </h2>
 
-a library for ready-made SVG files.
+ready-made sicalyme SVG files.
 
 allows SVG animation.
 
