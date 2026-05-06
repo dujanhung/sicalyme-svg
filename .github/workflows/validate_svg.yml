@@ -12,11 +12,11 @@ jobs:
   steps:
    - name: checkout repo
      uses: actions/checkout@v5
-   - name: checkout svg-schema-validator repo
+   - name: checkout xml-schema-validator repo
      uses: actions/checkout@v5
      with:
-      repository: dujanhung/svg-schema-validator
-      path: svg-schema-validator
+      repository: dujanhung/xml-schema-validator
+      path: xml-schema-validator
    - name: checkout xsd repo
      uses: actions/checkout@v5
      with:
@@ -32,4 +32,4 @@ jobs:
      run: pip install cssutils
    - name: validate
      run: |
-      find . -type f -name "*.svg" -exec python svg-schema-validator/script.py xsd/files/svg.xsd {} svg \;
+      find . -type f -name "*.svg" -exec python xml-schema-validator/script.py xsd/files/svg.xsd {} svg \;
