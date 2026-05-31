@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
 <style lang="CSS">
-.sicalyme_color_brown{
- fill:#7f4a00;
- stroke:#5e3201
-}
-.sicalyme_color_white{
- fill:#d0d0d0;
- stroke:#aaa
-}
-.sicalyme_color_black{
- fill:#707070;
- stroke:#505050
-}
+.SCL_color_brown{fill:#7f4a00;stroke:#5e3201}
+.SCL_color_white{fill:#d0d0d0;stroke:#aaa}
+.SCL_color_black{fill:#707070;stroke:#505050}
 </style>
 <!--
 insert new shapes here
