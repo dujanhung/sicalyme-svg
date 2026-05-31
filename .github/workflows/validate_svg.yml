@@ -12,16 +12,16 @@ jobs:
   steps:
    - name: checkout repo
      uses: actions/checkout@v5
-   - name: checkout dtd-xml-validator repo
-     uses: actions/checkout@v5
-     with:
-      repository: dujanhung/dtd-xml-validator
-      path: dtd-xml-validator
    - name: checkout dtd repo
      uses: actions/checkout@v5
      with:
       repository: dujanhung/dtd
       path: dtd
+   - name: checkout dtd-xml-validator repo
+     uses: actions/checkout@v5
+     with:
+      repository: dujanhung/dtd-xml-validator
+      path: dtd-xml-validator
    - name: setup Python
      uses: actions/setup-python@v6
      with:
